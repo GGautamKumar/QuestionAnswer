@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question Answer</title>
+  <link rel="stylesheet" href="{% static 'secondproject/css/style.css' %}">
+  
+</head>
+<body>
+    <div class="main-wrapper">
+        <!-- Main content -->
+        <div class="container">
+          <h2>Ask Questions from PDF !</h2>
+          <form method="post" action="{% url 'home' %}" id="pdfForm" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" id="pdfFile" name="pdf" accept=".pdf" required />
+            <input type="text" id="question" name="question" placeholder="Enter your question" required />
+            <button type="submit">Ask</button>
+          </form>
+          <div id="answer"> 
+            {{ result_data }}
+          </div>
+        </div>
+    
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <h3>Conversation History</h3>
+          {% if request.session.conversation %}
+            {% for item in request.session.conversation %}
+              <div class="conversation-entry">
+                <strong>Question:</strong> {{ item.question }}<br>
+                <strong>Bot Result:</strong> {{ item.answer }}<br>
+              </div>
+            {% endfor %}
+          {% else %}
+            <p>No previous conversation.</p>
+          {% endif %}
+        </div>
+      </div>
+</body>
+</html>
+

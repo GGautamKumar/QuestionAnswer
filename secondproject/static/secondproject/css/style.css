@@ -1,0 +1,102 @@
+
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+  }
+  
+  .main-wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+  }
+  
+  .container {
+    flex: 2;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #2c3e50;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input[type="file"],
+  input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  button {
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  #answer {
+    margin-top: 20px;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  /* .sidebar {
+    flex: 1;
+    background-color: #f9f9fb;
+    padding: 30px;
+    border-left: 1px solid #e0e0e0;
+    overflow-y: scroll;
+  } */
+  .sidebar {
+    flex: 1;
+    background-color: #f9f9fb;
+    padding: 30px;
+    border-left: 1px solid #e0e0e0;
+    overflow-y: auto;        /* Allows scrolling when needed */
+    max-height: 100vh;       /* Prevents overflow beyond viewport height */
+    scrollbar-width: thin;   /* For Firefox */
+    scrollbar-color: #c1c1c1 #f9f9fb; /* Optional: style the scrollbar */
+  }
+  
+  
+  .sidebar h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #2c3e50;
+  }
+  
+  .conversation-entry {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  strong {
+    color: #34495e;
+  }
+h1{
+    color: red;
+}

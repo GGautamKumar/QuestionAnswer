@@ -1,0 +1,1 @@
+What is salesforce Admin?: A Salesforce Admin is a Salesforce user with system administration duties and special permissions. They are responsible for setting up Salesforce for their organizations, making sure it runs smoothly, and can add user accounts and specify what people can see and do in Salesforce.
